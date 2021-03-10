@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learn-Math</title>
+  <meta charset="utf-8">
+  <style language="text/css">
+   body{
+    background-color:#ebebe0;
+    margin-bottom: 2%;
+}
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-size: 20px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#D3D3D3;
+}
+.contact{
+    float: right;
+}
+.logo{float:left;
+width:15%;
+height:15%;
+bottom:0px; right:0px;  
+position:fixed;}
+div.sol{background-color:#d6d6c2;
+text-align:justify;
+margin:auto;
+width:80%;
+border:2px solid #3e3e28;
+padding:15px;}
+.button {
+            background-color: #266150;
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        label {
+            color: #4F4846 ;
+        }
+</style>
+</head>
+<body>
+<script language="javascript">
+function Resoudre(){
+var a=document.getElementById('C1').value;
+var b=document.getElementById('C2').value;
+var c=document.getElementById('C3').value;
+var Delta=b*b-4*a*c;
+if(a!=0){
+	if(Delta>0){
+	x1=(-b-Math.sqrt(Delta))/(2*a);
+	x2=(-b+Math.sqrt(Delta))/(2*a);
+	Sol="Deux solutions : "+x1+" et "+x2;}
+	else{
+		if(Delta==0){Sol="Solution double :"+(-b/(2*a));}
+		else {Sol="Pas de Solutions réelles";}
+	}
+
+	}
+else{if(b!=0){Sol='solution unique : '+(-c/b);}
+	else{Sol='pas de solution ou infinité de sol';}
+	}
+document.getElementById('abc').innerHTML=Sol;
+}
+</script>
+<script language="javascript">
+function nbr_premier() {
+    var nbrPremier = "";
+    var valeur = document.getElementById("val").value;
+    for (var index = 2; index <= valeur; index++) {
+        var i = 2;
+        while (index % i != 0 && i <= index) {
+            i++;
+            if (i == index) {
+                console.log(index)
+                nbrPremier = nbrPremier + index + " ";
+            }
+        }
+    }
+
+    document.getElementById("affich").innerHTML = nbrPremier;
+	}
+</script>
+<ol>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="cours.html">Cours</a></li>
+  <li><a href="pratique.html">Pratique</a></li>
+  <li class="contact"><a href="contact.html">Rejoignez-nous!</a></li>
+</ol>
+<br>
+<img class="logo" src="logo.jfif">
+<p>On vous propose un résolveur des équations pour vérifier vos resultats</p>
+<div class="sol">
+<h2><center> Résolveur d'équations de 2<sup>eme</sup> degré </center></h2>  
+<form>
+<input type="text" size="4" id="C1">X<sup>2</sup>+
+<input type="text" size="4" id="C2">X+
+<input type="text" size="4" id="C3">=0 <br> <br>
+<input type="button" value="Résoudre" onClick="Resoudre()"><br>
+<p id="abc"> ici s'afficheront les solutions </p>
+</form>
+</div>
+<hr>
+<p>On vous propose aussi un script qui affiche les nombres premiers
+compris entre 0 et n où n est un entier positif ≥ 2 saisi au clavier.</p>
+<div class="sol">
+<form>
+            <label><u>Entrez la valeur de n:</u></label>
+            <input id="val" type="text" />
+            <input class="button" type="button" value="continuer" onclick="nbr_premier()">
+			<p id="affich"></p>
+        </form>
+</div>
+<hr>
+<footer>
+	<center>
+	  <h3>Contactez-nous!</h3></center>
+	  <center>
+  <a href="https://www.facebook.com/fans.fsr/" title="Facebook"><img style="border-radius:25px " src="facebook.png" height="40px" width="40px"></a>
+  <a href="https://www.instagram.com/facultedessciencesderabat/" title="instagram"><img style="border-radius:50px " src="instagram.jfif" height="40px" width="40px"></a></center>
+	<b><p align="center" style="font-size:15px; color:grey; font-family: Arial;" >Copyright © 2021 Maroua Hibatollah AABOUD</p></b>
+	</footer>
+
+</body>

@@ -1,0 +1,199 @@
+<html>
+<head>
+  <title>Learn-Math</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+  body{background-color:#ffffe6;}
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-size: 20px;
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#D3D3D3;
+}
+.contact{
+    float: right;
+}
+.logo{float:left;
+width:15%;
+height:15%;
+bottom:0px; right:0px;  
+position:fixed;}
+.p1{
+	color:blue;
+	font-size:20px;
+}
+div.def{background-color:#ffffcc;
+text-align:justify;
+margin:auto;
+width:80%;
+border:2px solid red;
+padding:15px;
+}
+div.exemple{background-color:#ffffcc;
+	text-align:justify;
+	margin:auto;
+	width:80%;
+	border:2px solid blue;
+	padding:15px;
+}
+</style>
+</head>
+<body>
+<script language="javascript">
+function est_palindrome () {
+ {
+             var tmp=0, x, nbr, y;
+       
+             nbr = Number(document.getElementById("pal").value);
+       
+             y = nbr;
+             while(nbr > 0)
+             {
+               x = nbr%10;
+               nbr = parseInt(nbr/10);
+               tmp = tmp*10+x;
+             }
+             if(tmp == y)
+             {
+                alert("Le nombre est un palindrome.");
+             }
+             else
+             {
+                alert("Le nombre n'est pas un palindrome.");
+             }
+         }
+}
+
+</script>
+<ol>
+  <li id="li1"><a href="home.html">Home</a></li>
+  <li id="li1"><a href="cours.html">Cours</a></li>
+  <li id="li1"><a href="pratique.html">Pratique</a></li>
+  <li class="contact"><a href="contact.html">Rejoignez-nous!</a></li>
+</ol>
+<img class="logo" src="logo.jfif">
+<br>
+<h1><center>Les nombres palindromes<center></h1>
+<p>C'est un nombre qui peut se lire dans les deux sens, c’est-à-dire que la séquence de ses chiffres est la même lorsqu’il est lu de droite à gauche 
+ou de gauche à droite.
+Dans le langage courant, on trouve des mots palindromes, comme NON, ANNA, LAVAL et SELLES.
+Les nombres 66, 161, 1441 et 580 085 sont des nombres palindromes.
+Avec les chiffres 2 et 3, je peux écrire 6 nombres palindromes de 2 ou 3 chiffres : 22, 33, 222, 333, 232 et 323.<br>
+En effet,<br>
+<b>Il existe neuf nombres palindromes à deux chiffres :</b><br>
+{11, 22, 33, 44, 55, 66, 77, 88, 99}.<br>
+<b>Il existe 90 nombres palindromes de trois chiffres :</b><br>
+{101, 111, 121, 131, 141, 151, 161, 171, 181, 191, ..., 909, 919, 929, 939, 949, 959, 969, 979, 989, 999}<br>
+<b>et aussi 90 nombres palindromes de quatre chiffres :</b><br>
+{1001, 1111, 1221, 1331, 1441, 1551, 1661, 1771, 1881, 1991, ..., 9009, 9119, 9229, 9339, 9449, 9559, 9669, 9779, 9889, 9999},<br>
+donc, il existe 199 nombres palindromes inférieurs à 10 a la puissance 4.
+ Il existe 1 099 nombres palindromes inférieurs à 10 a la puissance 5 ...
+</p>
+ <p class="p1"><b>veuillez entrez un nombre:</b></p>
+ <input type="text" id="pal" >
+ <input type="button" value="confimer" OnClick="est_palindrome ()">
+ <hr>
+ <h1><center>Les équations simple<center></h1>
+<div class="def">
+<h2 style="color:red;text-decoration:underline;">Définition</h2>
+• Une <strong>équation</strong> est une égalité qui comporte un nombre inconnu. Ce nombre est désigné par une lettre et est appelé l'<strong>inconnue</strong>.
+<br/>• Lorsque l'on remplace l'inconnue d'une équation par un nombre qui rend l'égalité vraie, alors ce nombre est une <strong>solution</strong> de l'équation.
+<br/>• <strong>Résoudre une équation</strong>, c'est trouver toutes les solutions de cette équation.
+</div><br>
+<div class="def">
+<h2 style="color:red;text-decoration:underline;">Équations de la forme a + x = b :</h2>
+Pour résoudre ce genre d'équations, on utilise la règle suivante :<br>
+<i>On peut ajouter ou soustraire un même nombre aux deux membres d'une équation en conservant les mêmes solutions.</i>
+<h2 style="color:red;text-decoration:underline;">Équations de la forme ax = b :</h2>
+Pour résoudre ce genre d'équations, on utilise la règle suivante :<br>
+<i>On peut multiplier ou diviser chaque membre d'une équation par un même nombre <b>non nul</b> en conservant les mêmes solutions.</i>
+</div><br>
+<div class="exemple">
+<h2 style="color:blue;text-decoration:underline;">Exemples</h2>
+<b>a) x + 2 = 10</b> <br>
+ on ajoute (-2) aux deux membres<br>
+x + 2 - 2 = 10 - 2 on calcule<br>
+la solution est x = 8<br>
+<b>b) x - 6 = -3 </b><br>
+on va ajouter 6 à chaque membre.<br>
+x - 6 + 6 = -3 + 6 on calcule <br>
+la solution est x = 3<br>
+<b>c)3x=21</b><br>
+on va diviser chaque membre par 3<br>
+3x/3=21/3 on calcule <br>
+la solution est x=7<br>
+<b>d)−4x=28</b><br>
+on va diviser chaque membre par -4<br>
+-4x/-4=28/-4 on calcule <br>
+la solution est x=-9
+</div><br>
+ <h1><center>Les équations de second degré<center></h1>
+ <div class="def">
+ <p>
+C'est une équation de la forme <b>ax²+bx+c=0</b> (avec <u style="color: red;">a non nul</u>). 
+Pour pouvoir résoudre une telle équation, il faut tout d'abord calculer <b>le discriminant Δ</b>.<br>	
+Pour le calculer, c'est facile, il suffit d'appliquer cette formule :
+<span style="text-align: center; background-color:lightgreen; font-family: verdana;">Δ = b² - 4ac</span> <br>
+Ensuite, selon le résultat, on va pouvoir connaître le nombre de solutions :<br>
+            <b>•Si Δ < 0:</b> : </b>Il n'y a pas de solution.<br>
+			<b>•Si Δ = 0 : </b>il y a une seule solution à l'équation : c'est x= -b/(2a)<br>
+			<b>•Si Δ > 0 : </b> il y a deux solutions qui sont x<sub>1</sub> = (-b-√Δ)/(2a) et x<sub>2</sub>= (-b+√Δ)/(2a)
+ </div><br>
+ <div class="exemple">
+ <h2 style="color:blue;text-decoration:underline;">Methode</h2>
+ a)2x²-x+6=0<br>
+ a = 2, b = -1 et c = -6 donc Δ = b² – 4ac = (-1)² – 4 x 2 x (-6) = 49.<br>
+ Comme Δ > 0, l'équation possède deux solutions distinctes :<br>
+ x<sub>1</sub>=(-b-√Δ)/(2a)=-3/2 et x<sub>2</sub>=2
+ </div><br>
+ <p style="color:red"><u>Remarque</u>:Pour mieux comprendre regarder les videos ci joints: <a href=" https://youtu.be/youUIZ-wsYk" title="Video1"><p>Video1</p></a>
+ <a href="https://www.youtube.com/watch?v=RhHheS2Wpyk" title="video2"><p>Video2</p></a>
+ <a href="https://www.youtube.com/watch?v=v6fI2RqCCiE" title="video3"><p>Video3</p></a></p>
+ <hr>
+  <h1><center>Les nombres premiers<center></h1>
+  <div class="def">
+  <h2 style="color:red;text-decoration:underline;">Définition</h2>
+  <p>Un nombre premier est un entier naturel qui admet exactement deux diviseurs distincts entiers et positifs.
+  Ces deux diviseurs sont 1 et le nombre considéré, puisque tout nombre a pour diviseurs 1 et lui-même (comme le montre l’égalité n = 1 × n),
+  les nombres premiers étant ceux qui ne possèdent pas d'autre diviseur. 
+  Par exemple, le nombre entier 7 est premier car 1 et 7 sont les seuls diviseurs entiers et positifs de 7.</p>
+</div><br>
+<div class="exemple">
+ <h2 style="color:blue;text-decoration:underline;">Exemple le nombre 5:</h2>
+ <p>On ne peut diviser ce nombre que par 1 et 5 (lui-même) si on veut obtenir un nombre entier (c'est-à-dire sans virgule).
+On a : 5/1 = 5 et 5/5 = 1
+Note : la plupart des nombres sont divisibles par d'autres nombres qu'eux-mêmes et 1 :
+12/3 = 4 ; 22/11 = 2 ; ...
+Mais un nombre premier ne peut être multiple d'autre chose que 1 et lui-même :
+Reprenons 5, si on le divise par 2 on obtient 2,5 ; mais 2,5 n'est pas un nombre entier.
+ Vous pouvez essayer de le diviser par d'autres nombres...5 n'est divisible que par 1 et par 5.
+</p>
+</div>
+ <hr><footer>
+	<center>
+	  <h3>Contactez-nous!</h3></center>
+	  <center>
+  <a href="https://www.facebook.com/fans.fsr/" title="Facebook"><img style="border-radius:25px " src="facebook.png" height="40px" width="40px"></a>
+  <a href="https://www.instagram.com/facultedessciencesderabat/" title="instagram"><img style="border-radius:50px " src="instagram.jfif" height="40px" width="40px"></a></center>
+	<b><p align="center" style="font-size:15px; color:grey; font-family: Arial;" >Copyright © 2021 Maroua Hibatollah AABOUD</p></b>
+	</footer>
+ 
+ 
